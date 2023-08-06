@@ -1,0 +1,85 @@
+:root {
+    --board-size: 30rem;
+    --main-color: lightsteelblue;
+    --alt-color: lightcoral;
+    --font-family: Arial, Helvetica, sans-serif;
+    --font-color: wheat; 
+}
+
+
+@media screen and (max-width: 481px){
+    #header {
+        font-size: 5vh;
+    }
+
+    #board {
+        height: 19rem;
+        width: 19rem;
+    }
+
+    .board > #case1,#case2,#case3,#case4,#case5,#case6,#case7,#case8,#case9:hover {
+        background-color: white;
+    }
+
+    #footer {
+        font-size: 2.5vh;
+    }
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--font-color);
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 5rem;
+    margin: 0;
+}
+
+.header {
+    background-color: var(--alt-color);
+    display: grid;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    filter: drop-shadow(1px 1px 5px rgb(100, 100, 100));
+}
+
+.content {
+    background-color: var(--main-color);
+    display: grid;
+}
+
+.board {
+    border: 2px solid black;
+    background-color: white;
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: var(--board-size);
+    width: var(--board-size);
+    box-shadow: 5px 5px 10px rgb(92, 92, 92);
+}
+
+.board .case{
+    height: auto;
+    width: auto;
+    border: 2px solid black;
+}
+
+.board .case:hover {
+    background-color: lightgrey;
+}
+
+.footer {
+    background-color: var(--alt-color);
+    font-size: 2rem;
+    display: grid;
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+    filter: drop-shadow(-1px -1px 5px rgb(100, 100, 100));
+}
