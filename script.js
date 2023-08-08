@@ -101,7 +101,11 @@ const gameLogic = (() => {
         popUp();
     }
 
-    restart.addEventListener('click', () => playable = true)
+    restart.addEventListener('click', () => {
+        playable = true;
+        countx = 0;
+        counto = 0;
+    });
 })();
 
 function popUp() {
